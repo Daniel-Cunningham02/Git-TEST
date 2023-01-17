@@ -8,8 +8,11 @@ namespace GettingIntoGit
         static void Main(string[] args)
         {
             Random rand = new Random();
-            Console.WriteLine("You're now playing a guessing game. Guess a number between 1 and 100");
-            int randomNumber = rand.Next(1, 100);
+            Console.WriteLine("Input Two numbers for the Maximum and Minimum on two separate lines.");
+            string min = Console.ReadLine();
+            string max = Console.ReadLine();
+            Console.WriteLine("You're now playing a guessing game. Guess a number between " + Int32.Parse(min) + " and " + Int32.Parse(max) + ".");
+            int randomNumber = rand.Next(Int32.Parse(min), Int32.Parse(max));
             Console.Write("Guess a number: ");
             string guess = Console.ReadLine();
             int guessI32 = Int32.Parse(guess);
